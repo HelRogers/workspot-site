@@ -8,7 +8,7 @@ description: The businesses and projects that sit under WorkSpot Ltd.
 <section class="hero">
   <div class="container">
     <span class="eyebrow">Ventures</span>
-    <h1>What WorkSpot does<span class="accent">,</span> in practice.</h1>
+    <h1>What WorkSpot does, in practice<span class="accent" aria-hidden="true"></span></h1>
     <p class="lede" style="margin-top: 2rem; max-width: 56ch;">Three businesses sit under the WorkSpot roof today. Each one stands on its own, with its own clients, customers and remit. What they share is the way the work gets done.</p>
   </div>
 </section>

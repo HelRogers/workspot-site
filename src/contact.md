@@ -8,7 +8,7 @@ description: Get in touch with Helenor Rogers at WorkSpot Ltd.
 <section class="hero">
   <div class="container">
     <span class="eyebrow">Contact</span>
-    <h1>Say hello.</h1>
+    <h1>Say hello<span class="accent" aria-hidden="true"></span></h1>
     <p class="lede" style="margin-top: 2rem; max-width: 56ch;">The quickest way to reach Helenor is by email or LinkedIn. If you would rather use the form below, it lands in the same inbox.</p>
   </div>
 </section>
@@ -28,7 +28,7 @@ description: Get in touch with Helenor Rogers at WorkSpot Ltd.
         </p>
       </div>
 
-      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="form">
+      <form name="contact" method="POST" action="/thanks/" data-netlify="true" netlify-honeypot="bot-field" class="form">
         <input type="hidden" name="form-name" value="contact">
         <p hidden>
           <label>Do not fill this out: <input name="bot-field"></label>

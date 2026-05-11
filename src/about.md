@@ -8,7 +8,7 @@ description: About WorkSpot Ltd, the operating philosophy and the people behind 
 <section class="hero">
   <div class="container">
     <span class="eyebrow">About</span>
-    <h1>Different ventures.<br>One operating philosophy.</h1>
+    <h1>Different ventures.<br>One operating philosophy<span class="accent" aria-hidden="true"></span></h1>
     <p class="lede" style="margin-top: 2rem; max-width: 56ch;">WorkSpot exists to give good ideas the space to grow, run by people who care about doing the work properly.</p>
   </div>
 </section>
