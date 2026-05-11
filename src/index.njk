@@ -1,0 +1,96 @@
+---
+layout: layouts/base.njk
+title: Home
+permalink: /
+---
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">WorkSpot Ltd</span>
+      <h1>A home for ventures<span class="accent">,</span> ideas and the work that matters.</h1>
+    </div>
+    <div class="hero-meta">
+      <p class="lede">WorkSpot is a small group of focused businesses. Different markets, different problems, one operating philosophy.</p>
+      <p style="margin-top: 1.5rem;">
+        <a href="/ventures/" class="btn">See the ventures →</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="philosophy-section">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">How we work</span>
+        <h2>Insightful. Innovative.<br>Open to opportunity.</h2>
+      </div>
+      <p>We back commercial thinking with a positive outlook, and we are always focused on delivery. Curiosity opens the door. Execution carries it through.</p>
+    </div>
+
+    <div class="principles">
+      <div class="principle">
+        <span class="principle-num">01</span>
+        <h3>Insight first</h3>
+        <p>Good decisions start with a clear read of the situation. We dig into the data, the people and the context before we recommend anything.</p>
+      </div>
+      <div class="principle">
+        <span class="principle-num">02</span>
+        <h3>Open to opportunity</h3>
+        <p>We are optimists by temperament and innovators by habit. New tools, new markets, new ways of working: we lean in rather than wait and see.</p>
+      </div>
+      <div class="principle">
+        <span class="principle-num">03</span>
+        <h3>Commercially driven</h3>
+        <p>Strategy that does not ship is just an opinion. Every venture is built around clear commercial outcomes and the discipline to deliver them.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="border-top: 1px solid var(--rule);">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">What sits here</span>
+        <h2>Three ventures.<br>One set of standards.</h2>
+      </div>
+      <p>Each business runs on its own terms, with its own customers and remit. WorkSpot is the steady frame around them.</p>
+    </div>
+
+    <div class="ventures">
+      {% for venture in ventures %}
+      <article class="venture">
+        <div class="venture-number">0{{ loop.index }}</div>
+        <h3>{{ venture.name }}</h3>
+        {% if venture.subtitle %}<p class="venture-subtitle">{{ venture.subtitle }}</p>{% endif %}
+        <p class="tagline">{{ venture.tagline }}</p>
+        <p>{{ venture.description }}</p>
+        <div class="venture-foot">
+          <span class="venture-status {% if venture.status == 'In progress' or venture.status == 'Coming soon' %}coming{% endif %}">{{ venture.status }}</span>
+          {% if venture.url and venture.url != "#" %}
+          <a href="{{ venture.url }}" class="venture-link" target="_blank" rel="noopener">Visit →</a>
+          {% endif %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="contact-card">
+      <div>
+        <span class="eyebrow" style="color: rgba(246,243,236,0.7);">Get in touch</span>
+        <h2>Working on something interesting?</h2>
+        <p>Whether it is a question, a collaboration or a quick chat, the door is open.</p>
+      </div>
+      <div class="contact-actions">
+        <a href="mailto:{{ site.email }}">✉ {{ site.email }}</a>
+        <a href="{{ site.social.linkedin }}" target="_blank" rel="noopener">→ Connect on LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</section>
